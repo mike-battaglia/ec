@@ -1,0 +1,430 @@
+/*
+Theme Name: Divi Child
+Theme URI: http://www.elegantthemes.com/gallery/divi/
+Template: Divi
+Author: Elegant Themes
+Author URI: http://www.elegantthemes.com
+Description: Smart. Flexible. Beautiful. Divi is the most powerful theme in our collection.
+Version: 4.17.3.1651411056
+Updated: 2022-05-01 09:17:36
+
+*/
+
+
+.dpt-all-terms .form-label {
+  font-weight: 600;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  margin-top: 24px;
+  padding: 12px;
+  background-color: #e8e8e8;
+}
+
+.term-wrap {
+  background-color: #fafafa;
+  padding-bottom: 12px;
+}
+
+.term-wrap label {
+  padding-left: 12px !important;
+}
+
+/*wishlist  */
+.wl-list-pop dd {
+    font-size: 13px;
+    margin: 0 0 0px 2px;
+}
+#wl-wrapper .wl-add-link.star {
+    background: none;
+	background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%23EA2D04%22%20class%3D%22bi%20bi-heart%22%20viewBox%3D%220%200%2016%2016%22%3E%0A%20%20%3Cpath%20d%3D%22m8%202.748-.717-.737C5.6.281%202.514.878%201.4%203.053c-.523%201.023-.641%202.5.314%204.385.92%201.815%202.834%203.989%206.286%206.357%203.452-2.368%205.365-4.542%206.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878%2010.4.28%208.717%202.01L8%202.748zM8%2015C-7.333%204.868%203.279-3.04%207.824%201.143c.06.055.119.112.176.171a3.12%203.12%200%200%201%20.176-.17C12.72-3.042%2023.333%204.867%208%2015z%22%2F%3E%0A%3C%2Fsvg%3E") !important;
+    background-repeat: no-repeat;
+	 padding: 0px !important;
+    background-size: contain !important;
+	 height: 35px;
+    display: block;
+    width: 35px;
+}
+
+
+.products #wl-wrapper .wl-add-link.star{
+	background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2364656b%22%20class%3D%22bi%20bi-heart%22%20viewBox%3D%220%200%2016%2016%22%3E%0A%20%20%3Cpath%20d%3D%22m8%202.748-.717-.737C5.6.281%202.514.878%201.4%203.053c-.523%201.023-.641%202.5.314%204.385.92%201.815%202.834%203.989%206.286%206.357%203.452-2.368%205.365-4.542%206.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878%2010.4.28%208.717%202.01L8%202.748zM8%2015C-7.333%204.868%203.279-3.04%207.824%201.143c.06.055.119.112.176.171a3.12%203.12%200%200%201%20.176-.17C12.72-3.042%2023.333%204.867%208%2015z%22%2F%3E%0A%3C%2Fsvg%3E") !important;
+}
+
+.products #wl-wrapper .wl-add-link.star:hover{
+		background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%23EA2D04%22%20class%3D%22bi%20bi-heart%22%20viewBox%3D%220%200%2016%2016%22%3E%0A%20%20%3Cpath%20d%3D%22m8%202.748-.717-.737C5.6.281%202.514.878%201.4%203.053c-.523%201.023-.641%202.5.314%204.385.92%201.815%202.834%203.989%206.286%206.357%203.452-2.368%205.365-4.542%206.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878%2010.4.28%208.717%202.01L8%202.748zM8%2015C-7.333%204.868%203.279-3.04%207.824%201.143c.06.055.119.112.176.171a3.12%203.12%200%200%201%20.176-.17C12.72-3.042%2023.333%204.867%208%2015z%22%2F%3E%0A%3C%2Fsvg%3E") !important;
+}
+#wl-wrapper.wl-button-already-in .wl-add-link.star{
+	background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%23EA2D04%22%20class%3D%22bi%20bi-heart-fill%22%20viewBox%3D%220%200%2016%2016%22%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20d%3D%22M8%201.314C12.438-3.248%2023.534%204.735%208%2015-7.534%204.736%203.562-3.248%208%201.314z%22%2F%3E%0A%3C%2Fsvg%3E") !important;
+}
+
+#wl-wrapper.wl-button-wrap {
+    display: inline-block;
+    margin-left: 25px;
+    width: auto;
+}
+
+.heart-and-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.woocommerce ul.products li.product .button {
+    margin-top: 0px
+}
+.woocommerce ul.products li.product .button:hover{
+	color: #EA2D04 !important
+}
+
+.products #wl-wrapper.wl-button-wrap {
+     margin-left: 0px;
+    padding: inherit;
+	width:auto;
+}
+
+.products #wl-wrapper.wl-button-wrap:hover,
+a.button.product_type_simple.add_to_cart_button{
+	 border: none !important;
+    padding: 0px !important;
+}
+.add-to-cart-wrangler a.button.product_type_simple.add_to_cart_button:hover{
+	padding:0px !important
+}
+
+.products #wl-wrapper .wl-add-link.star {
+    padding: initial;
+    height: 23px;
+    display: block;
+    width: 23px;
+}
+
+
+/*Product Edit page Dokan vendor start*/
+.dokan-form-group.sst-tic-select-wrap {
+  display: none;
+}
+
+.single-product .ec_product_data {
+  margin-top: 20px
+}
+
+.single-product .ec_product_meta {
+  margin-bottom: 15px;
+}
+
+button.single_add_to_cart_button.button.alt
+{
+  color: #fff;
+  border: 2px solid #EA2D04;
+  background: #EA2D04;
+  padding: 10px 20px 10px 20px;
+  border-radius: 12px !important;
+  font-size: 25px;
+}
+
+button.single_add_to_cart_button.button.alt:hover {
+  color: #FFFFFF;
+  background-color: #64656B;
+  border: 2px solid #64656B;
+}
+
+a.wl-add-to.wl-add-but.button.present {
+  color: #ffffff !important;
+  background-color: #000;
+  border-radius: 10px;
+  margin-top: 15px !important;
+  border: none;
+  font-size: 16px;
+  padding: 10px 25px;
+  display: block;
+}
+.wl-list-pop a.wl-add-to-single.button {
+ font-size: 15px;
+    border: 2px solid #EA2D04 !important;
+    color: #EA2D04 !important;
+	background:transparent;
+}
+.wl-list-pop a.wl-add-to-single.button:hover {
+    border: 2px solid #EA2D04;
+    background-color: #EA2D04;
+	color: #fff !important;
+}
+
+a.wl-add-to.wl-add-but.button.present:hover {
+  background-color: #6d6d6d;
+}
+
+a {
+  color: #EA2D04;
+}
+
+.contact-mail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+span.contact-mail a {
+  line-height: 13px;
+  font-weight: bold;
+}
+
+.ec-info {
+  margin-top: 26px;
+  color: #000;
+}
+
+.ec-info ul {
+  margin-bottom: 20px;
+  list-style-position: inside;
+}
+
+.social-share-container {
+  float: left;
+  width: 100%;
+  text-align: center;
+}
+
+.social-share-container h3 {
+  font-size: 24px;
+  color: #64656b;
+}
+
+.et_social_inline .et_social_networks ul.et_social_icons_container {
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: center;
+  align-self: center;
+  width: 200px !important;
+  margin: auto !important;
+}
+
+.gallery-wrap {
+  width: 48%;
+  float: left;
+}
+
+.gallery-wrap .woocommerce-product-gallery.woocommerce-product-gallery--with-images {
+  width: 100% !important
+}
+
+div#product-26666 {
+  font-family: 'Montserrat';
+}
+
+.woocommerce .woocommerce-breadcrumb a,
+.woocommerce .woocommerce-breadcrumb,
+.woocommerce div.product p.stock,
+.certified-wrap p {
+  color: #7a7a7a;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.woocommerce div.product p.stock {
+  margin-top: 15px;
+}
+
+.woocommerce div.product .product_title {
+  font-size: 40px;
+}
+
+.entry-summary p.price span {
+  color: #060716;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 40px !important;
+  text-transform: none;
+  letter-spacing: 5.4px;
+}
+
+p.price {
+  display: block;
+  margin-top: 35px;
+}
+
+.content-after-summary {
+  float: left;
+  width: 100%;
+}
+
+.artwork-title h2 {
+  font-size: 29px;
+}
+
+.artwork-title-tags {
+  display: flex;
+  align-items: center;
+}
+
+.artwork-title {
+  flex: 2;
+}
+
+.artwork-tags {
+  flex: 1;
+}
+
+span.tagged_as a {
+  color: #64656B;
+}
+
+body.woocommerce div.product .woocommerce-tabs ul.tabs,
+body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs {
+  background: #fff;
+}
+
+body.woocommerce div.product .woocommerce-tabs ul.tabs li,
+body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li {
+  background: #fff;
+}
+
+body.woocommerce .woocommerce-tabs {
+  border-top: 0px;
+}
+
+body.woocommerce div.product .woocommerce-tabs ul.tabs li a,
+body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li a {
+  padding: 20px 25px !important;
+}
+
+body.woocommerce div.product .woocommerce-tabs ul.tabs li.active a,
+body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li.active a {
+  color: #EA2D04 !important;
+}
+
+/* header */
+
+.et_pb_menu_0_tb_header .et_pb_menu_inner_container>.et_pb_menu__logo-wrap .et_pb_menu__logo img {
+  max-width: 225px;
+}
+
+/*Product Edit page Dokan vendor */
+
+#left-area ul {
+  padding-bottom: 0px;
+}
+
+.dokan-single-store .profile-frame .profile-info-box.profile-layout-layout2 .profile-info-summery-wrapper .profile-info-summery .profile-info-head {
+  top: 0px;
+}
+
+body.woocommerce div.product .woocommerce-tabs ul.tabs, body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs{
+	position: relative;
+    left: -1px;
+}
+.dokan-single-store .dokan-store-tabs ul {
+  border-width: 0px;
+  border-color: transparent;
+  margin-bottom: 30px;
+}
+
+.dokan-store-products-filter-area .product-name-search {
+  padding-left: 15px;
+}
+
+.dokan-single-store .profile-frame .profile-info-box.profile-layout-layout2 .profile-info-summery-wrapper {
+  height: auto !important;
+  position: relative;
+  top: -55px;
+  background: transparent;
+}
+
+.dokan-single-store .profile-frame .profile-info-box.profile-layout-layout2 .profile-info-summery-wrapper .profile-info-summery .profile-info {
+  position: relative;
+}
+
+.dokan-single-store .dokan-store-tabs ul li:first-child a {
+  border-bottom: 1px solid #dd2b2b;
+}
+
+.dokan-single-store .dokan-store-tabs ul li a {
+  color: #dd2b2b;
+  font-weight: 600;
+  padding: 0px;
+  margin-right: 15px;
+}
+
+.dokan-single-store .dokan-store-tabs ul li a:hover,
+.dokan-single-store .profile-frame {
+  background: transparent;
+}
+
+.dokan-single-store .dokan-store-tabs ul li,
+.dokan-single-store .profile-frame .profile-info-box.profile-layout-layout2 .profile-info-summery-wrapper {
+  border-right: none;
+}
+
+.dokan-single-store .profile-frame .profile-info-box.profile-layout-layout2 .profile-info-summery-wrapper {
+  border: none;
+}
+
+.dokan-single-store .profile-frame .profile-info-box.profile-layout-layout2 .profile-info-summery-wrapper .profile-info-summery .profile-info-head .profile-img img {
+  height: 100px;
+  width: 100px;
+}
+
+ul.dokan-store-info {
+  margin-top: 20px;
+  list-style-type: none !important;
+}
+
+.dokan-single-store .profile-frame .profile-info-box.profile-layout-layout2 .profile-info-summery-wrapper .profile-info-summery .profile-info .dokan-store-info li:after {
+  content: "" !important;
+}
+
+.dokan-single-store .profile-frame .profile-info-box.profile-layout-layout2 .profile-info-summery-wrapper .profile-info-summery .profile-info .dokan-store-info li {
+  text-align: center;
+  display: block;
+  padding-bottom: 0px;
+  font-size: 16px;
+}
+
+li.dokan-store-primary-decipline {
+  font-size: 20px !important;
+}
+
+a.button.ec_request_quote {
+    color: #ffffff !important;
+    background-color: #000 !important;
+    border-radius: 10px !IMPORTANT;
+    margin-bottom: 15px !important;
+    margin-top: 15px !important;
+	font-size:16px;
+}
+.woocommerce div.product form.cart {
+    margin: 24px 0px 10px !important; 
+}
+
+/* media queries */
+@media(max-width: 768px){
+.gallery-wrap {
+	width: 100%;
+}
+	.artwork-title-tags {
+	flex-direction: column;
+	}
+	.artwork-title{
+		width:100%;
+	}
+	.social-share-container{
+		text-align:left;
+	}
+	.et_social_inline .et_social_networks ul.et_social_icons_container{
+		margin:0px !important;
+	}
+	
+}
+
+@media (min-width: 768px){
+	body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li.active {
+  border-top: 1px solid #d9d9d9;
+  border-left: 1px solid #d9d9d9;
+}
+	body.woocommerce div.product .woocommerce-tabs ul.tabs li,
+body.woocommerce #content-area div.product .woocommerce-tabs ul.tabs li {
+  border: none;
+	margin:0px !important;
+}
+}
+
