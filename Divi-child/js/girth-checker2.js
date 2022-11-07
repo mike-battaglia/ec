@@ -1,10 +1,10 @@
 //For each input [weight, height, length, width] validate:
-////weight must not be greater than 70
+////weight must not be greater than 150
 ////max dimenision must not exceed 108 inches
 ////sum of other dimensions x2 must not exceed 165
-////// var girth=""
+////Rules derived from UPS Ground
 
-console.log("GirthChecker version 11.23 called.");
+console.log("GirthChecker version.");
 
 let getWeight = document.getElementById("_weight");
 let getLength = document.getElementById("_length");
@@ -30,9 +30,9 @@ const heightWarning = document.getElementById("mbatt-warning_height");
 getWeight.addEventListener("change", (event) => {
   let valWeight = Number(getWeight.value);
   console.log(valWeight);
-  if (valWeight > Number(70)) {
+  if (valWeight > Number(150)) {
     console.log(
-      `This package is too heavy for regular shipping. Please select crate shipping. Need help?`
+      `This package is too heavy for regular shipping. Need help?`
     );
     weightWarning.classList.remove("mbatt-hidden");
   } else {
@@ -42,7 +42,7 @@ getWeight.addEventListener("change", (event) => {
 
 function fNotice(girth) {
   console.log(
-    `This package has a girth of ${girth}in, too large for regular shipping. Please select crate shipping. Need help?`
+    `This package has a girth of ${girth}in, too large for regular shipping. Need help?`
   );
   girthWarning.classList.remove("mbatt-hidden");
 }
@@ -63,7 +63,7 @@ function checkGirth() {
     //check fL + 2fW + 2fH
     if (lGirth > 165) {
       console.log(
-        `👋 GIRTH ERROR \n Length is the greatest dimension. \n L=${fL} W=${fW} H=${fH} \n ${fL}+${fW}+${fW}+${fH}+${fH} = ${lGirth}. \n Max is 165.`
+        `👋 GIRTH ERROR \n Length is the greatest dimension. \n L=${fL} W=${fW} H=${fH}. \n Max is 165.`
       );
       fNotice(lGirth);
       return;
@@ -76,7 +76,7 @@ function checkGirth() {
     //check fH + 2fW + 2fL
     if (hGirth > 165) {
       console.log(
-        `👋 GIRTH ERROR \n Height is the greatest dimension. \n L=${fL} W=${fW} H=${fH} \n ${fL}+${fL}+${fW}+${fW}+${fH} = ${lGirth}. \n Max is 165.`
+        `👋 GIRTH ERROR \n Height is the greatest dimension. \n L=${fL} W=${fW} H=${fH}. \n Max is 165.`
       );
       fNotice(hGirth);
       return;
@@ -90,7 +90,7 @@ function checkGirth() {
     //check fW + 2fL + 2fH
     if (wGirth > 165) {
       console.log(
-        `👋 GIRTH ERROR \n Width is the greatest dimension. \n L=${fL} W=${fW} H=${fH} \n ${fL}+${fL}+${fW}+${fH}+${fH} = ${wGirth}. \n Max is 165.`
+        `👋 GIRTH ERROR \n Width is the greatest dimension. \n L=${fL} W=${fW} H=${fH}. \n Max is 165.`
       );
       fNotice(wGirth);
       return;
@@ -101,7 +101,7 @@ function checkGirth() {
 
   if (fL === fW && fW === fH && fL + 2 * fW + 2 * fH > 165) {
     console.log(
-      `👋 GIRTH ERROR \n That's a big cube! \n L=${fL} W=${fW} H=${fH} \n ${fL}+${fL}+${fW}+${fH}+${fH} = ${wGirth}. \n Max is 165.`
+      `👋 GIRTH ERROR \n That's a big cube! \n L=${fL} W=${fW} H=${fH}. \n Max is 165.`
     );
     fNotice(wGirth);
     return;
@@ -117,7 +117,7 @@ getLength.addEventListener("change", (event) => {
   checkGirth();
   if (valLength > Number(108)) {
     console.log(
-      "This package's length exceeds 108in, and is too long for regular shipping. Please select crate shipping. Need help?"
+      "This package's length exceeds 108in, and is too long for regular shipping. Need help?"
     );
     lengthWarning.classList.remove("mbatt-hidden");
   } else {
@@ -131,7 +131,7 @@ getWidth.addEventListener("change", (event) => {
   checkGirth();
   if (valWidth > Number(108)) {
     console.log(
-      "This package's width exceeds 108in, and is too wide for regular shipping. Please select crate shipping. Need help?"
+      "This package's width exceeds 108in, and is too wide for regular shipping. Need help?"
     );
     widthWarning.classList.remove("mbatt-hidden");
   } else {
@@ -145,7 +145,7 @@ getHeight.addEventListener("change", (event) => {
   checkGirth();
   if (valHeight > Number(108)) {
     console.log(
-      "This package's height exceeds 108in, and is too tall for regular shipping. Please select crate shipping. Need help?"
+      "This package's height exceeds 108in, and is too tall for regular shipping. Need help?"
     );
     heightWarning.classList.remove("mbatt-hidden");
   } else {
