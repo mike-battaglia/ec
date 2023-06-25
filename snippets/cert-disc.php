@@ -106,7 +106,7 @@ function display_discounted_price_in_cart($price, $values, $cart_item_key )
     if (is_user_logged_in() && is_certified_buyer(get_current_user_id())) {
         $regular_price = floatval($product->get_regular_price());
         $discount_price = apply_certified_buyer_discount($regular_price);
-        $price = wc_price($regular_price) . '<br><del>' . wc_price($discount_price) . '</del>';
+        $price = wc_price($regular_price)/* . '<br><del>' . wc_price($discount_price) . '</del>'*/;
     }
 
     return $price;
@@ -115,16 +115,15 @@ function display_discounted_price_in_cart($price, $values, $cart_item_key )
 add_filter('woocommerce_cart_item_price', 'display_discounted_price_in_cart', 10, 3);
 
 // Modify cart subtotal title
-function modify_cart_subtotal_title($title)
-{
-    if (is_user_logged_in() && is_certified_buyer(get_current_user_id())) {
-        $title = __('Designer Net Subtotal', 'woocommerce');
+function modify_cart_subtotal_title($translated_text, $text, $domain) {
+    if ('woocommerce' === $domain && 'Subtotal' === $text && is_cart() && is_user_logged_in() && is_certified_buyer(get_current_user_id())) {
+        $translated_text = __('Designer Net Subtotal', 'woocommerce');
     }
 
-    return $title;
+    return $translated_text;
 }
 
-add_filter('woocommerce_cart_totals_order_total_label', 'modify_cart_subtotal_title', 10, 1);
+add_filter('gettext', 'modify_cart_subtotal_title', 10, 3);
 
 // Display original price and discounted price on checkout and order details pages
 function display_discounted_price_in_order_details($product_name, $item) {
