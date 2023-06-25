@@ -12,7 +12,7 @@ function apply_certified_buyer_discount($price) {
 
 // Display new price with discount for 'certified_buyer' role
 function display_price_with_discount( $price, $product ) {
-    if ( is_user_logged_in() && is_certified_buyer( get_current_user_id() ) ) {
+    if ( is_user_logged_in() /*&& is_certified_buyer( get_current_user_id() )*/ ) {
 
         if ( $product->is_type( 'variable' ) ) {
             $variation_min_price = apply_certified_buyer_discount( $product->get_variation_price( 'min' ) );
@@ -28,7 +28,7 @@ function display_price_with_discount( $price, $product ) {
             $discount_price = apply_certified_buyer_discount( $regular_price );
 
             if ( $discount_price !== $regular_price ) {
-                $price = '<del>' . wc_price( $regular_price ) . '</del><br><ins><span class="certified-price-ins">Designer net: ' . wc_price( $discount_price ) . '</span></ins>';
+                $price = '<del>' . wc_price( $regular_price ) . '</del><br><ins class="woocommerce-Price-amount amount certified-amount"><span>Designer net: ' . wc_price( $discount_price ) . '</span></ins>';
             }
         }
     }
@@ -133,7 +133,7 @@ function display_discounted_price_in_order_details($product_name, $item) {
         if ($product && is_user_logged_in() && is_certified_buyer(get_current_user_id())) {
             $regular_price = floatval($product->get_regular_price());
             $discount_price = apply_certified_buyer_discount($regular_price);
-            $product_name .= '<br>Retail: ' . wc_price($regular_price) . '<br>Designer Net: ' . wc_price($discount_price);
+            $product_name .= '<br><b>Retail: ' . wc_price($regular_price) . '</b><br>Designer Net: ' . wc_price($discount_price);
         }
     }
 
