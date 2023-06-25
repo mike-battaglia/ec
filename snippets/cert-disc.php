@@ -98,53 +98,48 @@ function apply_certified_buyer_discount_to_cart_items($cart) {
 
 add_action('woocommerce_before_calculate_totals', 'apply_certified_buyer_discount_to_cart_items', 10, 1);
 
-// Display original price and discounted price on cart page
-function display_original_and_discounted_price_on_cart($item_subtotal, $cart_item, $cart_item_key) {
+// Display original price and discounted price in cart table
+function display_discounted_price_in_cart($price, $values, $cart_item_key )
+{
+    $product = $values['data'];
+
     if (is_user_logged_in() && is_certified_buyer(get_current_user_id())) {
-        $product = $cart_item['data'];
-        $original_price = $product->get_regular_price();
-        $discounted_price = apply_certified_buyer_discount($original_price);
+        $regular_price = floatval($product->get_regular_price());
+        $discount_price = apply_certified_buyer_discount($regular_price);
+        $price = wc_price($regular_price) . '<br><del>' . wc_price($discount_price) . '</del>';
+    }
 
-        if ($product->is_type('variable')) {
-            $variation = new WC_Product_Variation($product->get_id());
-            $original_price = $variation->get_regular_price();
-            $discounted_price = apply_certified_buyer_discount($original_price);
-        }
+    return $price;
+}
 
-        if ($original_price !== $discounted_price) {
-            $item_subtotal = '<del>' . wc_price($original_price) . '</del> <ins>' . wc_price($discounted_price) . '</ins>';
+add_filter('woocommerce_cart_item_price', 'display_discounted_price_in_cart', 10, 3);
+
+// Modify cart subtotal title
+function modify_cart_subtotal_title($title)
+{
+    if (is_user_logged_in() && is_certified_buyer(get_current_user_id())) {
+        $title = __('Designer Net Subtotal', 'woocommerce');
+    }
+
+    return $title;
+}
+
+add_filter('woocommerce_cart_totals_order_total_label', 'modify_cart_subtotal_title', 10, 1);
+
+// Display original price and discounted price on checkout and order details pages
+function display_discounted_price_in_order_details($product_name, $item) {
+    if ($item instanceof WC_Order_Item_Product) {
+        $product = $item->get_product();
+
+        if ($product && is_user_logged_in() && is_certified_buyer(get_current_user_id())) {
+            $regular_price = floatval($product->get_regular_price());
+            $discount_price = apply_certified_buyer_discount($regular_price);
+            $product_name .= '<br>Retail: ' . wc_price($regular_price) . '<br>Designer Net: ' . wc_price($discount_price);
         }
     }
 
-    return $item_subtotal;
+    return $product_name;
 }
 
-add_filter('woocommerce_cart_item_subtotal', 'display_original_and_discounted_price_on_cart', 10, 3);
-
-// Display original price and discounted price on order details page
-function display_original_and_discounted_price_on_order($formatted_price, $order_item, $hide_prefix ) {
-    $order = $order_item->get_order();
-    $order_id = $order->get_id();
-    $user_id = get_post_meta($order_id, '_customer_user', true);
-
-    if (is_certified_buyer($user_id)) {
-		$product = $order_item->get_product();
-        $product_id = $product->get_id();
-        $product_price = $product->get_price();
-
-        if( $product->is_type('variable') ){
-            $variation = new WC_Product_Variation($product_id);
-            $product_price = $variation->get_regular_price();
-        }
-
-        $discounted_price = apply_certified_buyer_discount($product_price);
-
-        if ($product_price !== $discounted_price) {
-            $formatted_price = '<del>' . wc_price($product_price) . '</del> <ins>' . wc_price($discounted_price) . '</ins>';
-        }
-    }
-
-    return $formatted_price;
-}
-
-add_filter( 'woocommerce_order_formatted_line_subtotal', 'display_original_and_discounted_price_on_order', 20, 3 );
+add_filter('woocommerce_order_item_name', 'display_discounted_price_in_order_details', 10, 2);
+add_filter('woocommerce_checkout_cart_item_quantity', 'display_discounted_price_in_order_details', 10, 2);
